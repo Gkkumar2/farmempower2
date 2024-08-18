@@ -1,113 +1,89 @@
-import Image from "next/image";
+import { AuroraBackgroundDemo } from "@/components/home/AuroraBackgroundDemo";
+import { HeroHighlightDemo } from "@/components/home/HeroHighlightDemo";
+
+import { LayoutGridDemo } from "@/components/home/LayoutGridDemo";
+
+import { TextGenerateEffectDemo } from "@/components/home/TextGenerateEffectDemo";
+import { TypewriterEffectSmoothDemo } from "@/components/home/TypewriterEffectSmoothDemo";
+import Link from "next/link";
+import backgroundImage from '../public/bck3.jpg';
+import { ChevronDown, ChevronUp, DiamondMinus, FileWarningIcon, Flower2, Handshake, HeartHandshake, HomeIcon } from "lucide-react";
+import { FiFramer } from "react-icons/fi";
+import StickyScrollRevealDemo from "@/components/home/StickyScrollRevealDemo";
+import InfiniteMovingCardsDemo from "@/components/home/InfiniteMovingCardsDemo";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+  
+  <div className="">
+    <div className="flex flex-wrap bg-slate-100 max-w-5xl ml-5 rounded-xl">
+    <div className="w-full sm:w-8/12 mb-10">
+      <div className="container mx-auto h-full sm:p-10 ">
+        <nav className="flex px-4 justify-between items-center">
+          <div className="text-3xl font-bold">
+            <span className="text-green-700">Farm</span>Empower<span className="text-green-700">.</span>
+          </div>
+          <div>
+            <img src="https://image.flaticon.com/icons/svg/497/497348.svg" alt="" className="w-8"></img>
+          </div>
+        </nav>
+        <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+          <div className="w-full">
+            <h1 className="text-4xl lg:text-6xl font-bold">Revolutionizing <span className="text-green-700">Farming for a </span>Better Tomorrow</h1>
+            <div className="w-20 h-2 bg-green-700 my-4"></div>
+            <p className="text-2xl font-mono font-extrabold text-yellow-600 mb-5">Sowing sustainability, reaping community.</p>
+          </div>
+        </header>
       </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Leafs" className="w-full h-48 object-cover sm:h-full sm:w-4/12"></img>
+  </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
+  <div className="max-w-5xl mx-auto p-4 mt-10">
+  <div className="btm-nav flex justify-between items-center shadow-sm rounded-lg p-4 gap-1 bg-gray-100 text-green-800">
+    <div className="flex flex-col items-center w-full p-2">
+      <DiamondMinus className="h-10 w-10 text-green-400" />
+      <span className="btm-nav-label">Reduces Environmental Impact</span>
+    </div>
+    <div className="flex flex-col items-center w-full p-2">
+      <Flower2 className="h-10 w-10 text-yellow-600" />
+      <span className="btm-nav-label">Promotes Biodiversity</span>
+    </div>
+    <div className="flex flex-col items-center w-full p-2">
+      <Handshake className="h-10 w-10 text-teal-600" />
+      <span className="btm-nav-label">Supports Local Economies</span>
+    </div>
+  </div>
+</div>
+ <div className="-mt-20">
+     <LayoutGridDemo/>
+ </div>
+
+<div className="-mt-16">
+      <StickyScrollRevealDemo/>
+</div>
+     
+
+ <div className="relative max-w-5xl mx-auto mt-5">
+    <img className="h-96 w-full object-cover rounded-md" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2813&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Random image"></img>
+    <div className="absolute inset-0 bg-gray-500 opacity-60 rounded-md"></div>
+    <div className="absolute inset-0 flex items-center justify-center">
+
+        <h2 className="text-lg font-mono text-white p-4  ">
+          <TextGenerateEffectDemo />
+        </h2>
+    </div>
+</div>
+
+     
+      <div className="mt-10">
+           <InfiniteMovingCardsDemo/>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      
+      <TypewriterEffectSmoothDemo/>
+      <div>
       </div>
-    </main>
-  );
-}
+  </div>
+)}

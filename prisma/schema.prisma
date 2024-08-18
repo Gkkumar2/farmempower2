@@ -1,0 +1,222 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model KanbanBoard {
+  id        String   @id @default(cuid()) @map("_id")
+  name      String
+  userId    String
+  createdAt DateTime @default(now())
+  tasks     Task[]   @relation("BoardTasks")
+}
+
+model Task {
+  id        String      @id @default(cuid()) @map("_id")
+  name      String
+  status    Status
+  board     KanbanBoard @relation(fields: [boardId], references: [id], name: "BoardTasks")
+  boardId   String      @map("board")
+  createdAt DateTime    @default(now())
+}
+
+model Question {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime @default(now())
+  title      String
+  content    String
+  category   String
+  email      String
+  userName   String
+  profileImg String
+  replies    Reply[]
+}
+
+model Reply {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime @default(now())
+  content    String
+  questionId String   @db.ObjectId
+  question   Question @relation(fields: [questionId], references: [id])
+  email      String
+  userName   String
+  profileImg String
+}
+
+model Category {
+  id          String     @id @default(cuid()) @map("_id") 
+  name        String     @unique
+  description String?
+  practices   Practice[]
+}
+
+model Practice {
+  id                    String       @id @default(cuid()) @map("_id")
+  name                  String      
+  category              Category     @relation(fields: [categoryId], references: [id])
+  categoryId            String       @map("category")
+  description           String
+  image                 String
+  objectives            String[]
+  stepsInvolved         Step[]
+  suitableAreas         String[]
+  benefits              String[]
+  challenges            String[]
+  bestPractices         String[]
+  examples              Example[]
+  impactOnSustainability String
+  additionalResources   Resource[]
+  reviews               Review[]
+  
+}
+
+model Step {
+  id          String   @id @default(cuid()) @map("_id")
+  order       Int
+  description String
+  practice    Practice @relation(fields: [practiceId], references: [id])
+  practiceId  String   @map("practice")
+}
+
+model Example {
+  id         String   @id @default(cuid()) @map("_id")
+  location   String
+  details    String
+  practice   Practice @relation(fields: [practiceId], references: [id])
+  practiceId String   @map("practice")
+}
+
+model Resource {
+  id        String   @id @default(cuid()) @map("_id")
+  type      String
+  title     String
+  author    String
+  website   String?
+  practice  Practice @relation(fields: [practiceId], references: [id])
+  practiceId String   @map("practice")
+}
+
+model UploadedFile {
+  id        String        @id @default(cuid()) @map("_id")
+  name      String
+  type      String
+  data      Bytes
+  createdAt DateTime      @default(now())
+
+  resources DownloadableResource[]
+}
+
+model DownloadableResource {
+  id          String        @id @default(cuid()) @map("_id")
+  name        String
+  description String
+  category    String
+  image       UploadedFile? @relation(fields: [imageId], references: [id])
+  imageId     String?
+  link        String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+
+model Review {
+  id           String    @id @default(cuid()) @map("_id")
+  stars        Int
+  review       String
+  email        String
+  userName     String
+  profileImage String
+  practiceId   String
+  createdAt    DateTime  @default(now())
+  practice     Practice  @relation(fields: [practiceId], references: [id])
+  userId       String
+  user         User      @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id           String   @id @default(cuid()) @map("_id")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  email        String   @unique
+  userName     String
+  profileImage String
+  reviews      Review[]
+   plants      Plant[]
+  livestock    Livestock[]
+  resourcesT   ResourceT[]
+  feedback     Feedback[]
+  
+}
+model Plant {
+  id           String   @id @default(cuid()) @map("_id")
+  userId       String
+  type         String
+  variety      String
+  quantity     Int
+  datePlanted  DateTime
+  harvestDate  DateTime
+  status       String
+  notes        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id])
+}
+model Livestock {
+  id           String   @id @default(cuid()) @map("_id")
+  userId       String
+  type         String
+  breed        String
+  quantity     Int
+  dateAcquired DateTime
+  age          Int
+  healthStatus String
+  notes        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id])
+}
+model ResourceT {
+  id              String   @id @default(cuid()) @map("_id")
+  userId          String
+  name            String
+  category        String
+  quantity        Int
+  acquisitionDate DateTime
+  condition       String
+  notes           String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id])
+}
+model Feedback {
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
+  overallExperience     Int
+  toolFunctionality     Int
+  peerSupportQuality    Int
+  email                 String
+  userName              String
+  comments              String?  // Optional comments field
+  profileImage          String
+  userId                String
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id])
+
+   @@index([userId])
+}
+
+
+
+enum Status {
+  TODO
+  IN_PROGRESS
+  DONE
+}
