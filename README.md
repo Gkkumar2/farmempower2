@@ -23,8 +23,6 @@
 - ☁️ **Weather Forecasting**: 7-day forecast and search functionality.
 - 💬 **Community Forum**: Ask and answer farming-related questions.
 - 📚 **Resource Library**: Downloadable resources related to farming practices.
-- 🏆 **Gamification**: Badges and leaderboards for top contributors and barter participants.
-- 🔔 **User Notifications**: Real-time updates for offers and interactions.
 - 🔒 **User Authentication**: Powered by Clerk for sign-up, login, and profile management.
 
 ---
@@ -37,7 +35,6 @@
 - **Additional Tools**: 
   - react-stars (for star rating)
   - Tailwind CSS (for styling)
-  - Supabase (database)
   - MongoDB (for persistence)
 
 ---
@@ -56,3 +53,16 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/farmempower.git
+
+
+## Usage
+
+Once installed and running:
+
+- Navigate through the **Sustainable Practices** to explore farming methods.
+- Use the **Kanban Board** to manage tasks.
+- Access **Weather Forecast** and **Crop Disease Prediction** tools.
+- Participate in the **Community Forum** to ask or answer questions.
+- Manage your livestock with the **Livestock Management** tool.
+- Download guides and resources from the **Resource Library**.
+
