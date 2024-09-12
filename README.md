@@ -8,7 +8,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -88,11 +87,50 @@ Once installed and running:
 ![Home Page](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-28%20225115.png)
 
 ### Kanban Board
-![Kanban Board](https://link-to-your-image.com/kanban.png)
+![Kanban Board](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-28%20225314.png)
+![Kanban Board](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20014540.png)
 
 ### Livestock Management
-![Livestock Management](https://link-to-your-image.com/livestock.png)
+![Livestock Management](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20155756.png)
+
+### Planting Management
+![Planting Management](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20155953.png)
+
+### Resources Management
+![Resources Management](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20160021.png)
 
 ### Crop Disease Prediction
 ![Crop Disease Prediction](https://link-to-your-image.com/crop-disease.png)
+
+### Weather Forecast
+![Weather Forecast](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-28%20232011.png)
+
+### Discussion
+![Discussion](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20030436.png)
+![Discussion](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-29%20030453.png)
+
+### Resource Library
+![Weather Forecast](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-28%20232011.png)
+
+## Contributing
+
+We welcome contributions to **Farm Empower**! To contribute:
+
+1. Fork the repository.
+
+2. Create a new branch for your feature or bug fix:
+
+   ```bash
+   git checkout -b feature-name
+2. Create a new branch for your feature or bug fix:
+
+   ```bash
+   git checkout -b feature-name
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
 
