@@ -67,7 +67,7 @@ Add your API keys for Google APIs, Plant.id API, Clerk, and MongoDB connection s
 
 4.Run the development server:
     ```bash
-         
+    
     npm run dev
     
 Open http://localhost:3000 to view the app in your browser.
