@@ -7,7 +7,6 @@
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
@@ -82,4 +81,18 @@ Once installed and running:
 - Participate in the **Community Forum** to ask or answer questions.
 - Manage your livestock with the **Livestock Management** tool.
 - Download guides and resources from the **Resource Library**.
+
+## Screenshots
+
+### Home Page
+![Home Page](https://github.com/Gkkumar2/farmempower2/blob/master/Screenshot%202024-07-28%20225115.png)
+
+### Kanban Board
+![Kanban Board](https://link-to-your-image.com/kanban.png)
+
+### Livestock Management
+![Livestock Management](https://link-to-your-image.com/livestock.png)
+
+### Crop Disease Prediction
+![Crop Disease Prediction](https://link-to-your-image.com/crop-disease.png)
 
