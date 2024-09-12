@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Farm Empower 🌱
 
-## Getting Started
+**Farm Empower** is a sustainability-focused farming web application designed to help farmers adopt sustainable farming practices and create a supportive community. It provides tools for knowledge sharing, inventory management, and interactive features like crop disease prediction, weather forecasting, and more.
 
-First, run the development server:
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🌍 **Sustainable Farming Practices**: Organized by category, with detailed practice pages including ratings and reviews.
+- 📊 **Task Management**: Kanban board for organizing farm tasks.
+- 🌱 **Livestock Management**: Add, update, and manage livestock with MongoDB and Prisma backend.
+- 🌾 **Crop Disease Prediction**: Powered by the Plant.id API.
+- ☁️ **Weather Forecasting**: 7-day forecast and search functionality.
+- 💬 **Community Forum**: Ask and answer farming-related questions.
+- 📚 **Resource Library**: Downloadable resources related to farming practices.
+- 🏆 **Gamification**: Badges and leaderboards for top contributors and barter participants.
+- 🔔 **User Notifications**: Real-time updates for offers and interactions.
+- 🔒 **User Authentication**: Powered by Clerk for sign-up, login, and profile management.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: MongoDB, Prisma, Supabase (for user reviews), Clerk (for authentication)
+- **APIs**: Google APIs (Places, Maps, Geocoding), Plant.id API (for disease prediction)
+- **Additional Tools**: 
+  - react-stars (for star rating)
+  - Tailwind CSS (for styling)
+  - Supabase (database)
+  - MongoDB (for persistence)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js
+- MongoDB (set up your database)
+- Prisma (for database management)
+- Clerk (for authentication setup)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/farmempower.git
