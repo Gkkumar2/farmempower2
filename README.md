@@ -54,6 +54,23 @@
    ```bash
    git clone https://github.com/yourusername/farmempower.git
 
+2. Navigate to the project directory:
+   ```bash
+   cd farmempower
+
+3. Install dependencies:
+   ```bash
+   npm install
+Set up your environment variables:
+Create a .env.local file based on the .env.example provided in the repository.
+Add your API keys for Google APIs, Plant.id API, Clerk, and MongoDB connection strings.
+
+4.Run the development server:
+    ```bash
+         
+    npm run dev
+    
+Open http://localhost:3000 to view the app in your browser.
 
 ## Usage
 
